@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+:root {
+--bg-primary: #3d579f;
+
+}
+
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+#navbar {
+    background-color: black;
+    position: fixed;
+    top: -50px;
+    width: 100%;
+    transition: top 0.3s;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.nav_top_hidden {
+    top: -160px;
+}
+
+.nav_top_visible {
+    top: 0px;
+}
+
+.header {
+    background-color: #3d579f;
+    padding-top: calc(6rem + 74px);
+    padding-bottom: 6rem;
+}
+.header .header-title {
+  font-size: 2.75rem;
+  line-height: 2.75rem;
+}
+.header .header-subtitle {
+  font-size: 1.25rem;
+}
