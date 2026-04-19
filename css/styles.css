@@ -41,11 +41,17 @@ html {
 .header {
     background-color: #3d579f;
     color: white;
+    text-align: center;
+    
 }
 .header .header-title {
-  font-size: 2.75rem;
-  line-height: 2.75rem;
+    font-size: 2.75rem;
+    line-height: 2.75rem;
 }
 .header .header-subtitle {
   font-size: 1.25rem;
+}
+
+.test {
+    height: 6700000000px;
 }
