@@ -1,21 +1,62 @@
 @charset "UTF-8";
 
 :root {
---bg-primary: #3d579f;
-
+    font-family: 'Sour Gummy';
 }
-
-
 html {
     scroll-behavior: smooth !important;
 }
+head {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.sour-gummy-font {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
 
 #navbar {
-    background-color: black;
+    background-image: url('/assets/img/c\ i\ t\ y.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: fixed;
-    top: -50px;
+    top: -120px;
+    height: 120px;
     width: 100%;
-    transition: top 0.3s;
+    display: block;
+    transition: top 0.2s;
+}
+#navbar .overlay {
+    background-color: rgba(4, 17, 52, 0.85);
+    height: 120px;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+}
+
+.navbar .navbar-brand {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    align-content: center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.navbar .navbar-links {
+    float: right;
+    padding-right: 20px;
 }
 
 .navbar a {
@@ -23,35 +64,53 @@ html {
     display: block;
     color: white;
     text-align: center;
+    align-content: center;
     padding: 15px;
     text-decoration: none;
+    font-size: 30px;
 }
-.navbar a:hover {
-    background-color: #ddd;
+#navbar a:hover {
+    background-color: plum;
     color: black;
-}
-.nav_top_hidden {
-    top: -160px;
-}
-
-.nav_top_visible {
-    top: 0px;
 }
 
 .header {
-    background-color: #3d579f;
-    color: white;
-    text-align: center;
-    
-}
-.header .header-title {
-    font-size: 2.75rem;
-    line-height: 2.75rem;
-}
-.header .header-subtitle {
-  font-size: 1.25rem;
+    background-image: url('/assets/img/c\ i\ t\ y.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
+.header .overlay {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: rgba(4, 17, 52, 0.85);
+}
+.header-content {
+    color:white;
+    text-align: center;
+    width: 75%;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+}
+.header-content .header-title {
+    font-size: 4.75rem;
+    line-height: 2.75rem;
+}
+.header-content .header-subtitle {
+    font-size: 1.75rem;
+    overflow-wrap: break-word;
+}
+
+.header .header-transition {
+    font-size: 1.5rem;
+}
 .test {
-    height: 6700000000px;
+    height: 1000px;
 }
