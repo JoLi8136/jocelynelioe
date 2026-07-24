@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Contact Jocelyne Lioe about roles, projects, and collaborations." />
+        <meta name="author" content="Jocelyne Lioe" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Contact Me | Theatre Portfolio — Jocelyne Lioe</title>
+        <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="../assets/css/theatre.css" rel="stylesheet" />
+    </head>
+    <body>
+        <nav id="navbar">
+            <div class="navbar-inner">
+                <a class="navbar-brand" href="index.html">Jocelyne Lioe</a>
+                <div class="navbar-links">
+                    <a href="index.html">Home</a>
+                    <a href="about-me.html">About Me</a>
+                    <a href="headshot-resume.html">Headshot & Resume</a>
+                    <a href="media.html">Media</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="contact-me.html" class="active">Contact Me</a>
+                </div>
+                <button class="nav-icon" onclick="openMobileMenu()" aria-label="Menu"><i class="fa fa-bars"></i></button>
+            </div>
+        </nav>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="index.html" onclick="closeMobileMenu()">Home</a>
+            <a href="about-me.html" onclick="closeMobileMenu()">About Me</a>
+            <a href="headshot-resume.html" onclick="closeMobileMenu()">Headshot & Resume</a>
+            <a href="media.html" onclick="closeMobileMenu()">Media</a>
+            <a href="gallery.html" onclick="closeMobileMenu()">Gallery</a>
+            <a href="contact-me.html" class="active" onclick="closeMobileMenu()">Contact Me</a>
+        </div>
+
+        <header class="page-header">
+            <div class="container">
+                <h1>Contact Me</h1>
+                <p>For bookings, self-tape requests, or just to say hello.</p>
+            </div>
+        </header>
+                <div class="marquee-lights"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+        <section class="section">
+            <div class="container">
+                <!--
+                    This form has no backend yet. Easiest free option on GitHub
+                    Pages: sign up at https://formspree.io, get a form endpoint,
+                    and replace the action="..." below with it.
+                -->
+                <form action="https://formspree.io/f/yourFormId" method="POST" class="theatre-form">
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="message" placeholder="Your message" rows="5" required></textarea>
+                    <button type="submit" class="btn" style="align-self:flex-start;">Send Message</button>
+                </form>
+                <p style="text-align:center; opacity:0.75; margin-top:2rem;">
+                    Or reach me directly at
+                    <a href="mailto:youremail@example.com">youremail@example.com</a>
+                </p>
+            </div>
+        </section>
+        <footer class="site-footer">
+            <div class="container">
+                <p><a href="../index.html">&larr; Back to all portfolios</a></p>
+                <p>&copy; 2026 Jocelyne Lioe. All rights reserved.</p>
+                <div class="footer-icons">
+                    <a href="mailto:youremail@example.com" title="Email"><i class="fa fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/yourusername" title="Instagram"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.imdb.com/name/yourprofile" title="IMDb"><i class="fa fa-film"></i></a>
+                    <a href="https://www.youtube.com/@yourusername" title="Reel/YouTube"><i class="fa fa-youtube-play"></i></a>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../assets/js/theatre.js"></script>
+    </body>
+</html>
