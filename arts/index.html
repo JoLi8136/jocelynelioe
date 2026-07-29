@@ -15,16 +15,13 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="../assets/css/base.css" rel="stylesheet" />
     </head>
-    <body id="page-top">
+    <body id="page-top" class="home">
         <nav class="navbar" id="navbar">
             <div class="overlay">
-                <a class="navbar-brand" href="../index.html">Jocelyne Lioe</a>
+                <a class="navbar-brand" href="index.html">Jocelyne Lioe</a>
                 <div class="navbar-links">
-                        <a href="index.html" class="active">Home</a>
-                        <a href="about.html">About Me</a>
+                        <a href="about.html">About</a>
                         <a href="media.html">Media</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="resume.html">Resume</a>
                 </div>
                 <a href="javascript:void(0);" class="icon" onclick="openMobileMenu()">
                     <i class="fa fa-bars"></i>
@@ -32,20 +29,42 @@
             </div>
         </nav>
         <div class="mobile-menu" id="mobile-menu">
-            <a href="index.html" class="active" onclick="closeMobileMenu()">Home</a>
-            <a href="about.html" onclick="closeMobileMenu()">About Me</a>
-            <a href="media.html" onclick="closeMobileMenu()">Media</a>
-            <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
-            <a href="resume.html" onclick="closeMobileMenu()">Resume</a>
+            <div class="overlay">
+                <a href="about.html" onclick="closeMobileMenu()">About</a>
+                <a href="media.html" onclick="closeMobileMenu()">Media</a>
+            </div>
         </div>
 
         <header>
-            <div class="header">
-                <div class="overlay">
+            <div class="header header-collage">
+                <div class="img-row">
+                    <div class="img-column">
+                        <img src="../assets/img/arts/collage/asks.png" alt="" style="width: 100%;">
+                        <img src="../assets/img/arts/collage/rats.jpeg" alt="" style="width: 100%;">
+                        <img src="../assets/img/arts/digital/mermaid.jpg" alt="" style="width: 100%;">
+                    </div>
+                    <div class="img-column">
+                        <img src="../assets/img/arts/collage/pond-dragon.png" alt="" style="width: 100%;">
+                        <img src="../assets/img/arts/collage/clean-mind.jpeg" alt="" style="width: 100%;">
+                        <img src="../assets/img/arts/logos/lsoh.png" alt="" style="width: 100%;">
+                    </div>
+                    <div class="img-column">
+                        <img src="../assets/img/arts/collage/ccc.jpg" alt="" style="width: 100%;">
+                        <img src="../assets/img/arts/collage/join-ensemble.PNG" alt="" style="width: 100%;">
+                        <img src="../assets/img/arts/logos/improv.png" alt="" style="width: 100%;">
+                    </div>
+                    <div class="img-column">
+                        <img src="../assets/img/arts/collage/asa.png" alt="" style="width: 100%;">
+                        <img src="../assets/img/arts/collage/2weeks.png" alt="" style="width: 100%;">
+                        <img src="../assets/img/arts/digital/cityscape.jpg" alt="" style="width: 100%;">
+                    </div>
+                </div>
+                <div class="overlay" style="background-color: rgba(4, 17, 52, 0.8);">
                     <div class="header-content">
                         <h1 class="header-tag">hi! I'm</h1>
                         <h1 class="header-title">Jocelyne Lioe</h1>
-                        <p class="header-subtitle">Visual artist working across digital illustration, branding, and promotional design.</p>
+                        <p class="header-subtitle">Adaptable, creative, and quality driven.</p>
+                        <p>Specializes in digital illustration, brand identity, and promotional design.</p>
                         <div class="header-scroll">
                             <p>scroll down</p>
                             <a><i class="fa fa-angle-down"></i></a>
@@ -55,29 +74,34 @@
             </div>
         </header>
         <section id="work">
-            <div class="section">
+            <div class="dark-section">
                 <h2 class="section-heading">Selected Work</h2>
                 <div class="container">
-                    <div class="grid">
+                    <div class="card-grid">
                         <a class="card" href="media/digital-art.html">
-                            <div class="img-placeholder">Digital art preview</div>
+                            <img src="/assets/img/arts/digital-art.jpeg"></img>
                             <h3>Digital Art</h3>
-                            <p>Illustrations and digital paintings.</p>
+                            <p>Personal illustrations and digital paintings.</p>
                         </a>
                         <a class="card" href="media/logos.html">
-                            <div class="img-placeholder">Logo preview</div>
-                            <h3>Logos</h3>
-                            <p>Brand marks and identity design.</p>
+                            <img src="/assets/img/arts/logo.jpeg"></img>
+                            <h3>Logos & Brand Identity</h3>
+                            <p>Logos, brand marks and identity design.</p>
                         </a>
                         <a class="card" href="media/promotional-materials.html">
-                            <div class="img-placeholder">Promo preview</div>
+                            <img src="/assets/img/arts/promotions.jpeg"></img>
                             <h3>Promotional Materials</h3>
                             <p>Posters, flyers, and social campaigns.</p>
                         </a>
                         <a class="card" href="media/videos.html">
-                            <div class="img-placeholder">Video preview</div>
-                            <h3>Videos</h3>
-                            <p>Motion and video-based projects.</p>
+                            <img src="/assets/img/arts/video.jpeg"></img>
+                            <h3>Videos & Animations</h3>
+                            <p>Animations, special effects, and filmed video-based projects.</p>
+                        </a>
+                        <a class="card" href="media/programs.html">
+                            <img src="/assets/img/arts/program.jpg"></img>
+                            <h3>Programs & Infographics</h3>
+                            <p>Agendas, playbills, and set lists.</p>
                         </a>
                     </div>
                 </div>
@@ -90,9 +114,9 @@
                     <a href="mailto:jocelyne.lioe@gmail.com" title="Email"><i class="fa fa-envelope"></i></a>
                     <a href="https://www.linkedin.com/in/jocelyne-lioe" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
                     <a href="https://github.com/JoLi8136" title="GitHub"><i class="fa fa-github"></i></a>
-                    <a href="https://instagram.com/spamlikely1" title="Instagram"><i class="fa fa-instagram"></i></a>
+                    <a href="https://instagram.com/spam_likely11" title="Instagram"><i class="fa fa-instagram"></i></a>
                 </div>
-                <p style="text-align: right;"><a class="back-to-hub" href="index.html">&larr; Back to all portfolios</a></p>
+                <p style="text-align: right;"><a class="back-to-hub" href="/index.html">&larr; Back to all portfolios</a></p>
             </div>
         </footer>
 

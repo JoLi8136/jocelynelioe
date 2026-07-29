@@ -1,11 +1,6 @@
-// ===== Shared navbar scroll + mobile menu behavior =====
-// Used by the CS and Arts portfolios (the "navy navbar" aesthetic).
-// Safe to include on every page in those two portfolios even if a
-// page has no modal/lightbox images on it.
-
-window.onscroll = function () {
-  scrollFunction();
-};
+if (document.body.classList.contains("home")) {
+  window.onscroll = function () { scrollFunction(); };
+}
 
 function scrollFunction() {
   var navbar = document.getElementById("navbar");
@@ -35,34 +30,64 @@ function closeMobileMenu() {
   if (menu) menu.classList.remove("open");
 }
 
-// ===== Generalized lightbox =====
-// Add class="lightbox-img" to any <img>. Its "alt" text becomes the
-// caption. Works for any number of images on a page (galleries,
-// media pages, etc.) — not just a single #myImg like the original.
+// Lightbox Images, Videos, PDFs
 document.addEventListener("DOMContentLoaded", function () {
   var modal = document.getElementById("myModal");
   if (!modal) return;
 
   var modalImg = document.getElementById("img01");
+  var modalVideo = document.getElementById("video01");
+  var modalPdf = document.getElementById("pdf01");
   var captionText = document.getElementById("caption");
   var closeBtn = modal.querySelector(".close");
-  var triggers = document.querySelectorAll(".lightbox-img");
 
-  triggers.forEach(function (img) {
+  function hideAllModalContent() {
+    modalImg.style.display = "none";
+    modalVideo.pause();
+    modalVideo.removeAttribute("src");
+    modalVideo.style.display = "none";
+    modalPdf.removeAttribute("src");
+    modalPdf.style.display = "none";
+  }
+  function closeModal() {
+    modal.style.display = "none";
+    hideAllModalContent();
+  }
+
+  document.querySelectorAll(".lightbox-img").forEach(function (img) {
     img.style.cursor = "pointer";
     img.addEventListener("click", function () {
-      modal.style.display = "block";
       modalImg.src = this.getAttribute("data-full") || this.src;
+      modalImg.style.display = "block";
       captionText.innerHTML = this.alt || "";
+      modal.style.display = "block";
     });
   });
 
-  if (closeBtn) {
-    closeBtn.onclick = function () {
-      modal.style.display = "none";
-    };
-  }
+  document.querySelectorAll(".lightbox-video").forEach(function (trigger) {
+    trigger.style.cursor = "pointer";
+    trigger.addEventListener("click", function () {
+      modalVideo.src = this.getAttribute("data-src");
+      modalVideo.style.display = "block";
+      modalVideo.play();
+      captionText.innerHTML = this.getAttribute("data-caption") || "";
+      modal.style.display = "block";
+    });
+  });
+
+  document.querySelectorAll(".lightbox-pdf").forEach(function (trigger) {
+    trigger.style.cursor = "pointer";
+    trigger.addEventListener("click", function () {
+      modalPdf.src = this.getAttribute("data-src");
+      modalPdf.style.display = "block";
+      captionText.innerHTML = this.getAttribute("data-caption") || "";
+      modal.style.display = "block";
+    });
+  });
+
+  if (closeBtn) { closeBtn.onclick = closeModal; }
   modal.addEventListener("click", function (e) {
-    if (e.target === modal) modal.style.display = "none";
+    if (e.target === modal) closeModal();
   });
 });
+
