@@ -8,8 +8,7 @@ function closeMobileMenu() {
   if (menu) menu.classList.remove("open");
 }
 
-// Generalized lightbox — same pattern as assets/js/nav.js.
-// Add class="lightbox-img" to any <img>; its alt text becomes the caption.
+
 document.addEventListener("DOMContentLoaded", function () {
   var modal = document.getElementById("myModal");
   if (!modal) return;
