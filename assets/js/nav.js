@@ -85,6 +85,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  document.querySelectorAll(".lightbox-web").forEach(function (trigger) {
+  trigger.style.cursor = "pointer";
+  trigger.addEventListener("click", function () {
+    hideAllModalContent();
+    modalPdf.src = this.getAttribute("data-src");
+    modalPdf.style.display = "block";
+    captionText.innerHTML = this.getAttribute("data-caption") || "";
+    modal.style.display = "block";
+  });
+});
+
   if (closeBtn) { closeBtn.onclick = closeModal; }
   modal.addEventListener("click", function (e) {
     if (e.target === modal) closeModal();

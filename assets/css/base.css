@@ -391,6 +391,13 @@ body.home #navbar {
     border: none; 
 }
 
+.lightbox-web img {
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: none;
+}
+
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
 #caption {
   margin: auto;
