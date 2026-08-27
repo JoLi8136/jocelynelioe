@@ -16,25 +16,25 @@
     <body>
         <nav id="navbar">
             <div class="navbar-inner">
-                <a class="navbar-brand" href="portfolio.html">Jocelyne Lioe</a>
+                <a class="navbar-brand" href="../theatre">Jocelyne Lioe</a>
                 <div class="navbar-links">
-                    <a href="portfolio.html">Home</a>
-                    <a href="about-me.html">About Me</a>
-                    <a href="headshot-resume.html" class="active">Headshot & Resume</a>
-                    <a href="media.html">Media</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="contact-me.html">Contact Me</a>
+                    <a href="../theatre">Home</a>
+                    <a href="about-me">About Me</a>
+                    <a href="headshot-resume" class="active">Headshot & Resume</a>
+                    <a href="media">Media</a>
+                    <a href="portfolio">Portfolio</a>
+                    <a href="contact-me">Contact Me</a>
                 </div>
                 <button class="nav-icon" onclick="openMobileMenu()" aria-label="Menu"><i class="fa fa-bars"></i></button>
             </div>
         </nav>
         <div class="mobile-menu" id="mobile-menu">
-            <a href="portfolio.html" onclick="closeMobileMenu()">Home</a>
-            <a href="about-me.html" onclick="closeMobileMenu()">About Me</a>
-            <a href="headshot-resume.html" class="active" onclick="closeMobileMenu()">Headshot & Resume</a>
-            <a href="media.html" onclick="closeMobileMenu()">Media</a>
-            <a href="gallery.html" onclick="closeMobileMenu()">Gallery</a>
-            <a href="contact-me.html" onclick="closeMobileMenu()">Contact Me</a>
+            <a href="../theatre" onclick="closeMobileMenu()">Home</a>
+            <a href="about-me" onclick="closeMobileMenu()">About Me</a>
+            <a href="headshot-resume" class="active" onclick="closeMobileMenu()">Headshot & Resume</a>
+            <a href="media" onclick="closeMobileMenu()">Media</a>
+            <a href="portfolio" onclick="closeMobileMenu()">Portfolio</a>
+            <a href="contact-me" onclick="closeMobileMenu()">Contact Me</a>
         </div>
 
         <header class="page-header">
@@ -42,36 +42,42 @@
                 <h1>Headshot &amp; Resume</h1>
             </div>
         </header>
-                <div class="marquee-lights"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
         <section class="section">
             <div class="container">
-                <div class="grid">
-                    <div class="img-placeholder" style="max-width:320px;">Headshot 1 (theatrical)</div>
-                    <div class="img-placeholder" style="max-width:320px;">Headshot 2 (commercial)</div>
+                <div class="card-grid">
+                    <img src="../assets/img/theatre/portrait-headshot.jpg" style="max-width:320px; height:max-content;">
                 </div>
             </div>
         </section>
         <section class="section alt">
-            <div class="container" style="max-width:750px; text-align:center;">
-                <h2 class="section-heading">Resume</h2>
+            <div class="container two-col" style="text-align:center;">
+                <div>
+                    <h3 class="section-heading">Performing Arts Resume</h3>
+                    <p><a class="btn" href="../assets/files/jocelyne-lioe-acting-resume.pdf" download>Download PDF</a></p>
+                    <iframe class="resume-embed" src="../assets/files/jocelyne-lioe-acting-resume.pdf" title="Resume"></iframe>
+                </div>
+                <div>
+                    <h3 class="section-heading">Stage Management Resume</h3>
+                    <p><a class="btn" href="../assets/files/jocelyne-lioe-sm-resume.pdf" download>Download PDF</a></p>
+                    <iframe class="resume-embed" src="../assets/files/jocelyne-lioe-sm-resume.pdf" title="Resume"></iframe>
+                </div>
+            </div>
+            <!-- <div class="container" style="max-width:750px;">
+                <h3 class="section-heading">Theatre Resume</h3>
                 <p><a class="btn" href="../assets/files/jocelyne-lioe-theatre-resume.pdf" download>Download PDF</a></p>
                 <iframe class="resume-embed" src="../assets/files/jocelyne-lioe-theatre-resume.pdf" title="Resume"></iframe>
-                <p style="opacity:0.6; font-size:0.85rem;">
-                    Replace <code>assets/files/jocelyne-lioe-theatre-resume.pdf</code> with your actual resume file.
-                </p>
-            </div>
+            </div> -->
         </section>
         <footer class="site-footer">
             <div class="container">
-                <p><a href="../index.html">&larr; Back to all portfolios</a></p>
                 <p>&copy; 2026 Jocelyne Lioe. All rights reserved.</p>
                 <div class="footer-icons">
-                    <a href="mailto:youremail@example.com" title="Email"><i class="fa fa-envelope"></i></a>
-                    <a href="https://www.instagram.com/yourusername" title="Instagram"><i class="fa fa-instagram"></i></a>
-                    <a href="https://www.imdb.com/name/yourprofile" title="IMDb"><i class="fa fa-film"></i></a>
-                    <a href="https://www.youtube.com/@yourusername" title="Reel/YouTube"><i class="fa fa-youtube-play"></i></a>
+                    <a href="mailto:jocelyne.lioe@gmail.com" title="Email"><i class="fa fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/jocelyne_lioe" title="Instagram"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/jocelyne-lioe/" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
                 </div>
+                <p style="text-align: right;"><a class="all-portfolios-link" href="../index">&larr; Back to all portfolios</a></p>
             </div>
         </footer>
 

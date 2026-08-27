@@ -16,66 +16,105 @@
     <body>
         <nav id="navbar">
             <div class="navbar-inner">
-                <a class="navbar-brand" href="portfolio.html">Jocelyne Lioe</a>
+                <a class="navbar-brand" href="../theatre">Jocelyne Lioe</a>
                 <div class="navbar-links">
-                    <a href="portfolio.html">Home</a>
-                    <a href="about-me.html">About Me</a>
-                    <a href="headshot-resume.html">Headshot & Resume</a>
-                    <a href="media.html" class="active">Media</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="contact-me.html">Contact Me</a>
+                    <a href="../theatre">Home</a>
+                    <a href="about-me">About Me</a>
+                    <a href="headshot-resume">Headshot & Resume</a>
+                    <a href="media" class="active">Media</a>
+                    <a href="portfolio">Portfolio</a>
+                    <a href="contact-me">Contact Me</a>
                 </div>
                 <button class="nav-icon" onclick="openMobileMenu()" aria-label="Menu"><i class="fa fa-bars"></i></button>
             </div>
         </nav>
         <div class="mobile-menu" id="mobile-menu">
-            <a href="portfolio.html" onclick="closeMobileMenu()">Home</a>
-            <a href="about-me.html" onclick="closeMobileMenu()">About Me</a>
-            <a href="headshot-resume.html" onclick="closeMobileMenu()">Headshot & Resume</a>
-            <a href="media.html" class="active" onclick="closeMobileMenu()">Media</a>
-            <a href="gallery.html" onclick="closeMobileMenu()">Gallery</a>
-            <a href="contact-me.html" onclick="closeMobileMenu()">Contact Me</a>
+            <a href="../theatre" onclick="closeMobileMenu()">Home</a>
+            <a href="about-me" onclick="closeMobileMenu()">About Me</a>
+            <a href="headshot-resume" onclick="closeMobileMenu()">Headshot & Resume</a>
+            <a href="media" class="active" onclick="closeMobileMenu()">Media</a>
+            <a href="portfolio" onclick="closeMobileMenu()">Portfolio</a>
+            <a href="contact-me" onclick="closeMobileMenu()">Contact Me</a>
         </div>
 
         <header class="page-header">
             <div class="container">
                 <h1>Media</h1>
-                <p>Reel, self-tapes, and performance clips.</p>
+                <p></p>
             </div>
         </header>
-                <div class="marquee-lights"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-
         <section class="section">
             <div class="container">
-                <div class="grid">
+                <div class="card-grid">
                     <div class="card" style="max-width:420px;">
-                        <div class="img-placeholder" style="aspect-ratio:16/9;">Embed your demo reel here (YouTube/Vimeo iframe)</div>
-                        <h3>Demo Reel</h3>
-                        <p>[A one-line description of what's in the reel.]</p>
+                        <div class="cv-video" data-embed="https://www.youtube.com/embed/z8og4MsWOEk">
+                            <img class="cv-thumb" src="https://img.youtube.com/vi/z8og4MsWOEk/hqdefault.jpg" alt="">
+                            <button class="cv-play" aria-label="Play video">&#9658;</button>
+                        </div>
+                        <h3 style="text-align: center; margin-top: 1rem;">Acting Demo Reel</h3>
                     </div>
                     <div class="card" style="max-width:420px;">
-                        <div class="img-placeholder" style="aspect-ratio:16/9;">Embed a clip here</div>
-                        <h3>Scene / Self-Tape Title</h3>
-                        <p>[Role] &middot; [Project]</p>
+                        <div class="cv-video" data-embed="https://www.youtube.com/embed/S--jzFG-_NM">
+                            <img class="cv-thumb" src="https://img.youtube.com/vi/S--jzFG-_NM/hqdefault.jpg" alt="">
+                            <button class="cv-play" aria-label="Play video">&#9658;</button>
+                        </div>
+                        <h3 style="text-align: center; margin-top: 1rem;">Vocal Reel</h3>
                     </div>
-                    <div class="card" style="max-width:420px;">
-                        <div class="img-placeholder" style="aspect-ratio:16/9;">Embed a clip here</div>
-                        <h3>Scene / Self-Tape Title</h3>
-                        <p>[Role] &middot; [Project]</p>
+                </div>
+                <h2 style="text-align: center; margin-top: 3rem;">Performance Clips</h2>
+                <p class="section-intro" style="margin-bottom: 3rem;">Collection of cuts, snippets, and full songs and performances. </p>
+                <div class="cv-carousel" data-clips='[
+                    {"id": "0eKU6V_8AoY", "caption": "Carrie — You See"},
+                    {"id": "mhIMuspOrMc", "caption": "Little Shop of Horrors — Feed Me"},
+                    {"id": "Z8myjaXO4Po", "caption": "Little Shop of Horrors — Suppertime"},
+                    {"id": "4LGzjCV_3Aw", "caption": "Grease — Those Magic Changes"},
+                    {"id": "a2SLPhdsckY", "caption": "Grease — Party Queen"},
+                    {"id": "HxDMVFVNc4E", "caption": "Dogfight — Before It&#39s Over"},
+                    {"id": "R4g_gbnBxHo", "caption": "Suncoast Singers — Operator by the Manhattan Transfer"},
+                    {"id": "E-f9s85O8GY", "caption": "in harmony: a charity cabaret — When You Believe from Prince of Egypt"},
+                    {"id": "8zuVcKeH5XM", "caption": "Hadestown — All I&#39ve Ever Known"},
+                    {"id": "wadcZXXhpaI", "caption": "Hadestown — Flowers"},
+                    {"id": "w4cISVHj-sM", "caption": "Fun Home — Welcome to Our House on Maple Avenue"},
+                    {"id": "QRwzwK1UMME", "caption": "Fun Home — Finale"},
+                    {"id": "hA4hJjUaQNg", "caption": "Carrie — Epilogue"}
+                ]'>
+                    <span class="cv-arrow cv-prev-btn">&#10094;</span>
+                    <div class="cv-track">
+                        <div class="cv-card">
+                            <div class="cv-video">
+                                <img class="cv-thumb" src="" alt="">
+                                <button class="cv-play" aria-label="Play video">&#9658;</button>
+                            </div>
+                            <p class="cv-caption"></p>
+                        </div>
+                        <div class="cv-card">
+                            <div class="cv-video">
+                                <img class="cv-thumb" src="" alt="">
+                                <button class="cv-play" aria-label="Play video">&#9658;</button>
+                            </div>
+                            <p class="cv-caption"></p>
+                        </div>
+                        <div class="cv-card">
+                            <div class="cv-video">
+                                <img class="cv-thumb" src="" alt="">
+                                <button class="cv-play" aria-label="Play video">&#9658;</button>
+                            </div>
+                            <p class="cv-caption"></p>
+                        </div>
                     </div>
+                    <span class="cv-arrow cv-next-btn">&#10095;</span>
                 </div>
             </div>
         </section>
         <footer class="site-footer">
             <div class="container">
-                <p><a href="../index.html">&larr; Back to all portfolios</a></p>
                 <p>&copy; 2026 Jocelyne Lioe. All rights reserved.</p>
                 <div class="footer-icons">
-                    <a href="mailto:youremail@example.com" title="Email"><i class="fa fa-envelope"></i></a>
-                    <a href="https://www.instagram.com/yourusername" title="Instagram"><i class="fa fa-instagram"></i></a>
-                    <a href="https://www.imdb.com/name/yourprofile" title="IMDb"><i class="fa fa-film"></i></a>
-                    <a href="https://www.youtube.com/@yourusername" title="Reel/YouTube"><i class="fa fa-youtube-play"></i></a>
+                    <a href="mailto:jocelyne.lioe@gmail.com" title="Email"><i class="fa fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/jocelyne_lioe" title="Instagram"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/jocelyne-lioe/" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
                 </div>
+                <p style="text-align: right;"><a class="all-portfolios-link" href="../index">&larr; Back to all portfolios</a></p>
             </div>
         </footer>
 
