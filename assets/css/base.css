@@ -21,9 +21,11 @@ head {
     margin: 0;
     padding: 0;
 }
-body {
+html, body {
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
+    background-color: #030b22;
 }
 
 h1, .h1 {
@@ -73,12 +75,6 @@ p {
 img, video, iframe {
     max-width: 100%;
     height: auto;
-}
-html, body {
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    background-color: #030b22;
 }
 
 #navbar {

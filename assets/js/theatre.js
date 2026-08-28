@@ -150,8 +150,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         captionText.innerHTML = item.alt || "";
         if (activeShowInMain) activeShowInMain(index);
-        
+
         preloadAdjacent(index);
+    }
+    function preloadAdjacent(index) {
+        [index - 1, index + 1].forEach(function (i) {
+            var wrapped = ((i % activeImages.length) + activeImages.length) % activeImages.length;
+            var item = activeImages[wrapped];
+            if (item.type !== "pdf") {
+                var img = new Image();
+                img.src = item.src;
+            }
+        });
     }
     function closeModal() {
         modal.style.display = "none";
@@ -336,13 +346,3 @@ document.addEventListener("DOMContentLoaded", function () {
         else if (delta > 0 && prevBtn) prevBtn.click();
     }, { passive: true });
 })();
-function preloadAdjacent(index) {
-    [index - 1, index + 1].forEach(function (i) {
-        var wrapped = ((i % activeImages.length) + activeImages.length) % activeImages.length;
-        var item = activeImages[wrapped];
-        if (item.type !== "pdf") {
-            var img = new Image();
-            img.src = item.src;
-        }
-    });
-}
