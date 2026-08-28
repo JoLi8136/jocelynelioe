@@ -97,7 +97,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var activeShowInMain = null;
 
     slideshows.forEach(function (slideshow) {
-        var items = JSON.parse(slideshow.getAttribute("data-images"));
+        var items;
+        try {
+            items = JSON.parse(slideshow.getAttribute("data-images"));
+        } catch (err) {
+            console.error("Bad data-images JSON on this slideshow:", slideshow, err);
+            return;
+        }
         var mainImg = slideshow.querySelector(".slideshow-main-img");
         var mainWrap = slideshow.querySelector(".slideshow-main");
         var slidePrev = slideshow.querySelector(".slide-prev");
