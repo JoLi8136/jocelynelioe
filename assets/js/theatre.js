@@ -273,6 +273,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
         nextBtn.addEventListener("click", goNext);
         prevBtn.addEventListener("click", goPrev);
+
+        var touchStartX = 0;
+        var SWIPE_THRESHOLD = 50;
+
+        root.addEventListener("touchstart", function (e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        root.addEventListener("touchend", function (e) {
+            var delta = e.changedTouches[0].screenX - touchStartX;
+            if (Math.abs(delta) < SWIPE_THRESHOLD) return;
+            if (delta < 0) goNext();
+            else goPrev();
+        }, { passive: true });
     }
 
    document.querySelectorAll(".cv-carousel").forEach(function (root) {
@@ -291,3 +305,25 @@ document.addEventListener("DOMContentLoaded", function () {
         wrap.innerHTML = '<iframe src="' + embedUrl + '" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
     });
 });
+(function () {
+    var modal = document.getElementById("myModal");
+    if (!modal) return;
+
+    var touchStartX = 0;
+    var SWIPE_THRESHOLD = 50;   // minimum finger travel (px) to count as an intentional swipe
+
+    modal.addEventListener("touchstart", function (e) {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    modal.addEventListener("touchend", function (e) {
+        var touchEndX = e.changedTouches[0].screenX;
+        var delta = touchEndX - touchStartX;
+        if (Math.abs(delta) < SWIPE_THRESHOLD) return;
+
+        var nextBtn = modal.querySelector(".modal-next");
+        var prevBtn = modal.querySelector(".modal-prev");
+        if (delta < 0 && nextBtn) nextBtn.click();
+        else if (delta > 0 && prevBtn) prevBtn.click();
+    }, { passive: true });
+})();
