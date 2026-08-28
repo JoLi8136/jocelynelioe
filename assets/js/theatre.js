@@ -144,6 +144,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         captionText.innerHTML = item.alt || "";
         if (activeShowInMain) activeShowInMain(index);
+        
+        preloadAdjacent(index);
     }
     function closeModal() {
         modal.style.display = "none";
@@ -313,17 +315,28 @@ document.addEventListener("DOMContentLoaded", function () {
     var SWIPE_THRESHOLD = 50;   // minimum finger travel (px) to count as an intentional swipe
 
     modal.addEventListener("touchstart", function (e) {
+        if (e.target.closest("#pdfFrame")) return;   // let the PDF handle its own touch gestures
         touchStartX = e.changedTouches[0].screenX;
     }, { passive: true });
 
     modal.addEventListener("touchend", function (e) {
+        if (e.target.closest("#pdfFrame")) return;
         var touchEndX = e.changedTouches[0].screenX;
         var delta = touchEndX - touchStartX;
         if (Math.abs(delta) < SWIPE_THRESHOLD) return;
-
         var nextBtn = modal.querySelector(".modal-next");
         var prevBtn = modal.querySelector(".modal-prev");
         if (delta < 0 && nextBtn) nextBtn.click();
         else if (delta > 0 && prevBtn) prevBtn.click();
     }, { passive: true });
 })();
+function preloadAdjacent(index) {
+    [index - 1, index + 1].forEach(function (i) {
+        var wrapped = ((i % activeImages.length) + activeImages.length) % activeImages.length;
+        var item = activeImages[wrapped];
+        if (item.type !== "pdf") {
+            var img = new Image();
+            img.src = item.src;
+        }
+    });
+}
