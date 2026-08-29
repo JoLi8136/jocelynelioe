@@ -646,12 +646,23 @@ html, body {
 .modal {
     display: none;
     position: fixed;
+    inset: 0;
     z-index: 200;
-    padding-top: 50px;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
+    /* padding-top: 50px;
+    left: 0; 
+    top: 0;
+    width: 100%; 
+    height: 100%; */
     overflow: auto;
     background-color: rgba(10, 12, 15, 0.96);
+}
+.modal-inner {
+    margin: auto;
+    padding: 70px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
 }
 .modal-content { 
     margin: auto; 

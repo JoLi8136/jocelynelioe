@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
       modalImg.src = this.getAttribute("data-full") || this.src;
       modalImg.style.display = "block";
       captionText.innerHTML = this.alt || "";
-      modal.style.display = "block";
+      modal.style.display = "flex";
     });
   });
 
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
       modalVideo.style.display = "block";
       modalVideo.play();
       captionText.innerHTML = this.getAttribute("data-caption") || "";
-      modal.style.display = "block";
+      modal.style.display = "flex";
     });
   });
 
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
       modalPdf.src = this.getAttribute("data-src");
       modalPdf.style.display = "block";
       captionText.innerHTML = this.getAttribute("data-caption") || "";
-      modal.style.display = "block";
+      modal.style.display = "flex";
     });
   });
 
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     modalPdf.src = this.getAttribute("data-src");
     modalPdf.style.display = "block";
     captionText.innerHTML = this.getAttribute("data-caption") || "";
-    modal.style.display = "block";
+    modal.style.display = "flex";
   });
 });
 
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
             activeIndex = localIndex;
             activeShowInMain = showInMain;
             showInModal(activeIndex);
-            modal.style.display = "block";
+            modal.style.display = "flex";
         });
     });
 
@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (e.target === modal) closeModal();
     });
     document.addEventListener("keydown", function (e) {
-        if (modal.style.display !== "block") return;
+        if (modal.style.display !== "flex") return;
         if (e.key === "ArrowRight") nextModal();
         else if (e.key === "ArrowLeft") prevModal();
         else if (e.key === "Escape") closeModal();
